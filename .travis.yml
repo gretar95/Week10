@@ -1,9 +1,15 @@
 language: java
-
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: heroku
+  api_key:
+    secure: nr9W7RMq1mirKYFmpl6B4jrABadQJPD3zit0RRFszewoA60zEof0YwuRmhywGV2khptFZ8AIiBXqZyWkeO1OQTD+vM7b7m4SSi5Vs37KfQK4uQfI8qgpR6W0KXiReRX9iqClAB9Sbn/fJbNOqb4xFDSYjCaJfWxukCNzZ3S+AbxYPBWe5nv9d21pDIX/9nS9/Z5FbfisJOJzJu3BSLX8FUbIx5+dKt5JDxy6f41ZfuYvFPGqjOW9znD1bkBz1gt3x+0c9pUMIDnwOQ1x8m0hG3youoio+AejV2un0KyTuuj0lvP7FiuUet1hW+ait43JAfAO6psJl1i4CSWU6gDIpXVC1njwEdMF9xxkJho6tvNEjn4k4BVAakm/u0vm7lW8YAMCWHY/kUoBq+fDToY3IDr98qOB6Y7Yt3/fhulbB0ZMOhpYbclpQYNLRfiRCXIZCnadeyT/Rr3Q5J43tr064OoLK45OpE8hd0O1E1MeOQdeMNiH9wGjgMUpTKcx3Nz6RNR7AANjpYZigXg7QT291WlmiamTU+cpxTfNV1nf/6nUbrybogweCuPXTn69GYD26gUIqYx1IiFmb1ddZLPRLUM4LV1VRDUdw1Pgp5NbYEHa0IhkI2p57GYNYBRA3gSjhhEmueJcuL3a4j862mRX0blWsYnkdNro8ohY5Sy/RAE=
+  app: thawing-inlet-44468
+  on:
+    repo: gretar95/Week10
